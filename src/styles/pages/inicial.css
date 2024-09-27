@@ -1,0 +1,42 @@
+/* Tela inicial */
+
+.introducao-bg {
+  background: var(--cor-11);
+  box-shadow: inset 0 -120px var(--cor-0);
+ /*  border-bottom: 1px solid var(--cor-6); */
+}
+
+.introducao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 2.5rem;
+}
+
+.introducao-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-self: end;
+  padding: 0 0 12.5rem 0;
+}
+
+.introducao img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.introducao h1 {
+  margin: 0 0 2rem;
+}
+
+.introducao h1 span {
+  color: var(--cor-p1);
+}
+
+.introducao p {
+  margin: 0 0 1.5rem 0;
+}
+
+/* Section - carros */

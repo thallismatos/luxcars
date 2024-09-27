@@ -1,0 +1,43 @@
+.footer-bg {
+  background-color:var(--cor-11);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 0 0 0;
+}
+
+.footer h3 {
+  margin: 0 0 1rem 0;
+}
+
+.footer-contato ul,
+.footer-informacoes ul {
+  margin: 0 0 1rem 0;
+}
+
+.footer-contato ul li a,
+.footer-informacoes ul li a {
+  color: var(--cor-5);
+}
+
+.footer li {
+  margin: 0 0 1rem 0;
+  text-decoration: none;
+}
+
+.footer-redes {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.footer-redes a i {
+  font-size: 1.75rem;
+}
+
+.footer-redes a .bi {
+  color: var(--cor-0);
+}
