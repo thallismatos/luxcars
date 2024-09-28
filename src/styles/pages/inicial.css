@@ -3,7 +3,7 @@
 .introducao-bg {
   background: var(--cor-11);
   box-shadow: inset 0 -120px var(--cor-0);
- /*  border-bottom: 1px solid var(--cor-6); */
+  /*  border-bottom: 1px solid var(--cor-6); */
 }
 
 .introducao {
@@ -40,3 +40,117 @@
 }
 
 /* Section - carros */
+
+.carros-lista ul {
+  display: flex;
+  gap: 2.5rem;
+  max-width: 1400px;
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  margin: 0 auto;
+}
+
+.carros-lista ul li a img {
+  width: 440px;
+  height: auto;
+  box-shadow: 7px 7px 21px rgb(19, 17, 17,0.5);
+  opacity: 0.9;
+}
+
+/*  Tecnologias */
+
+.tecnologia-bg {
+  background-color: var(--cor-11);
+  box-shadow: inset 0 80px var(--cor-0), inset 0 -80px var(--cor-0);
+}
+
+.tecnologia {
+  display: flex;
+  gap: 2.25rem;
+}
+
+.tecnologia-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.tecnologia-conteudo {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+.tecnologia-conteudo>span {
+  display: block;
+  margin: 0 0 1.25rem 0;
+}
+
+.tecnologia-conteudo h2 {
+  margin: 0 0 2rem 0;
+}
+
+.tecnologia-conteudo>p {
+  margin: 0 0 1.25rem 0;
+}
+
+.tecnologia a {
+  margin-bottom: 80px;
+}
+
+.tecnologia-vantagens {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.tecnologia-vantagens i {
+  font-size: 1.5rem;
+  color: var(--cor-p1);
+}
+
+.tecnologia-vantagens h3 {
+  margin: 0 0 0.5rem 0;
+  width: max-content;
+}
+
+.tecnologia-imagem img {
+  border-radius: 0.5rem;
+}
+
+
+/* Parceiros */
+
+.parceiros {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.parceiros h2 {
+  margin-bottom: 60px;
+}
+
+.parceiros ul {
+  padding: 0 1.25rem;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+}
+
+.parceiros li {
+  display: flex;
+  padding: 2rem;
+  border-left: 2px solid var(--cor-2);
+}
+
+.parceiros img {
+  margin: auto;
+}
+
+.parceiros li:first-child,
+.parceiros li:nth-child(5) {
+  border-left: none;
+}
+
+.parceiros li:nth-child(n + 5) {
+  border-top: 2px solid var(--cor-2);
+}
