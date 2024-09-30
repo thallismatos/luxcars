@@ -41,20 +41,72 @@
 
 /* Section - carros */
 
-.carros-lista ul {
+.conteudo-card {
   display: flex;
   gap: 2.5rem;
   max-width: 1400px;
+  height: auto;
   padding: 0 1.25rem 1.25rem 1.25rem;
   margin: 0 auto;
 }
 
-.carros-lista ul li a img {
+.card {
+  width: 440px;
+  aspect-ratio: 1 / 0.7;
+  border-radius: 0.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.img-box {
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+}
+
+.img-box img {
   width: 440px;
   height: auto;
-  box-shadow: 7px 7px 21px rgb(19, 17, 17, 0.9);
-  opacity: 0.9;
-  border-radius: 0.5rem;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: 50% 90%;
+  transition: 0.5s ease-in-out;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.card:hover img {
+  filter: grayscale(1) brightness(0.4);
+}
+
+.card:hover::after {
+  opacity: 1;
+  inset: 20px;
+}
+
+.descricao-card {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.card:hover .descricao-card {
+  opacity: 1;
+  transform: translate(-50%, -50%);
 }
 
 /*  Tecnologias */
