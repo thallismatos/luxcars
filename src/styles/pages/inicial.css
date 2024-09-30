@@ -153,3 +153,67 @@
 .parceiros li:nth-child(n + 5) {
   border-top: 2px solid var(--cor-2);
 }
+
+/* Depoimentos */
+
+.feedback {
+  background-color: var(--cor-p1);
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.feedback img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px;
+  filter: grayscale(100%);
+}
+
+.feedback-conteudo {
+  padding: 2.5rem 3rem;
+  align-self: end;
+}
+
+.feedback-conteudo p {
+  max-width: 32ch;
+  font-family: "Merriweather", serif;
+  font-style: italic;
+  font-weight: 900;
+  margin: 0 0 2rem 0;
+  position: relative;
+}
+
+/* Seguros */
+
+.seguros-bg {
+  background: var(--cor-10);
+}
+
+.seguros-bg h2 {
+  padding: 1rem;
+}
+
+.seguros {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.seguros-item {
+  background-color: var(--cor-12);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.seguro-titulo {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.seguros-item ul li {
+  margin: 0 0 0.5rem 0;
+}
