@@ -1,0 +1,65 @@
+.carros-bg {
+  background: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 0%);
+}
+
+.carros {
+  display: flex;
+  gap: 2.5rem;
+  padding: 3rem 0;
+}
+
+.carros-imagem {
+  position: relative;
+}
+
+.carros-imagem span {
+  background: var(--cor-p1);
+  color: var(--cor-12);
+  display: inline-block;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.carros-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+}
+
+.carros h2 {
+  margin: 0 0 1.5rem 0;
+}
+
+.carros h2::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 8px;
+  background-color: var(--cor-p1);
+}
+
+.carros p {
+  margin: 0 0 2rem 0;
+}
+
+.carros a {
+  place-self: end;
+}
+
+.carros li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carros li+li {
+  margin: 1rem 0 0 0;
+}
+
+.carros-conteudo img {
+  width: 24px;
+  margin: 0 0.5rem 0 0;
+}

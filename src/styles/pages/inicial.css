@@ -109,6 +109,19 @@
   transform: translate(-50%, -50%);
 }
 
+.mais-carros {
+  display: flex;
+  gap: 2.5rem; /* Mesmo espaçamento que a seção original */
+  max-width: 1400px;
+  margin: 1rem auto; /* Ajuste a margem para o espaçamento */
+  padding: 0 1.25rem;
+}
+
+.botao-container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
 /*  Tecnologias */
 
 .tecnologia-bg {
