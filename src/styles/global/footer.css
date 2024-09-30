@@ -33,11 +33,3 @@
   flex-direction: row;
   gap: 1rem;
 }
-
-.footer-redes a i {
-  font-size: 1.75rem;
-}
-
-.footer-redes a .bi {
-  color: var(--cor-0);
-}

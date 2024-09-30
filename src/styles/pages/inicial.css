@@ -103,11 +103,6 @@
   gap: 2.5rem;
 }
 
-.tecnologia-vantagens i {
-  font-size: 1.5rem;
-  color: var(--cor-p1);
-}
-
 .tecnologia-vantagens h3 {
   margin: 0 0 0.5rem 0;
   width: max-content;
