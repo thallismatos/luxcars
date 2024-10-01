@@ -29,20 +29,30 @@ function loadFooter() {
 }
 
 // Carregar o header e footer quando o DOM estiver pronto
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   loadHeader();
   loadFooter();
 });
 
 /* Carros - Ver mais */
-document.getElementById('ver-mais').addEventListener('click', function() {
+document.getElementById('ver-mais').addEventListener('click', function () {
   var maisCarros = document.querySelector('.mais-carros');
-  if (maisCarros.style.display === 'none') {
-    maisCarros.style.display = 'flex'; // Altera para flex para manter a linha
-    this.textContent = 'Ver Menos'; // Altera o texto do botão
+
+  // Verifica a largura da tela
+  var larguraTela = window.innerWidth;
+
+  // Verifica se o elemento está oculto ou não
+  if (maisCarros.style.display === 'none' || maisCarros.style.display === '') {
+    // Se a largura da tela estiver entre 1000px e 1025px, aplica 'grid'
+    if (larguraTela >= 640 && larguraTela <= 1200) { /* Tiver q colcoar isso, pois tive problema no layout */
+      maisCarros.style.display = 'grid';
+    } else {
+      maisCarros.style.display = 'flex';
+    }
+    this.textContent = 'Ver Menos';
   } else {
     maisCarros.style.display = 'none';
-    this.textContent = 'Ver Mais'; // Restaura o texto do botão
+    this.textContent = 'Ver Mais';
   }
 });
 

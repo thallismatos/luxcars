@@ -1,5 +1,5 @@
 .footer-bg {
-  background-color:var(--cor-11);
+  background-color: var(--cor-11);
 }
 
 .footer {
@@ -31,4 +31,32 @@
   display: flex;
   flex-direction: row;
   gap: 1rem;
+}
+
+@media (max-width: 767.98px) {
+
+  .footer {
+    flex-wrap: wrap;
+  }
+
+  .footer-contato,
+  .footer-informacoes {
+    padding: 0 0 0 1rem;
+
+  }
+
+  .footer img {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+
+  .footer {
+    justify-content: space-around;
+    padding: 1.5rem 1rem 0 1rem;
+  }
+  .footer img {
+    display: none;
+  }
 }

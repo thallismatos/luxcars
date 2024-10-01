@@ -39,23 +39,44 @@
   margin: 0 0 1.5rem 0;
 }
 
-/* Section - carros */
+@media (max-width: 767.98px) {
 
-.conteudo-card {
+  .introducao {
+    flex-wrap: wrap;
+  }
+
+  .introducao picture img {
+    display: none;
+  }
+}
+
+/* Section - carros */
+.carros {
+  padding: 0 0 1.5rem 0;
+}
+
+.conteudo-card,
+.mais-carros {
   display: flex;
-  gap: 2.5rem;
+  gap: 1rem;
   max-width: 1400px;
   height: auto;
   padding: 0 1.25rem 1.25rem 1.25rem;
   margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-  width: 440px;
+  width: 400px;
   aspect-ratio: 1 / 0.7;
   border-radius: 0.5rem;
   position: relative;
   cursor: pointer;
+}
+
+.gambiarra-carro4 {
+  display: none;
 }
 
 .img-box {
@@ -67,7 +88,7 @@
 }
 
 .img-box img {
-  width: 440px;
+  width: 400px;
   height: auto;
   border-radius: inherit;
   object-fit: cover;
@@ -109,17 +130,66 @@
   transform: translate(-50%, -50%);
 }
 
-.mais-carros {
-  display: flex;
-  gap: 2.5rem; /* Mesmo espaçamento que a seção original */
-  max-width: 1400px;
-  margin: 1rem auto; /* Ajuste a margem para o espaçamento */
-  padding: 0 1.25rem;
-}
-
 .botao-container {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
+  justify-content: center;
+}
+
+@media (max-width: 767.98px) {
+
+  .conteudo-card,
+  .mais-carros {
+    flex-direction: column;
+    gap: 0rem;
+    padding-bottom: 0rem;
+  }
+
+  .card {
+    width: 300px;
+  }
+
+  .img-box img {
+    width: 300px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999.98px) {
+
+  .conteudo-card,
+  .mais-carros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 0 0.5rem;
+  }
+
+  .card {
+    width: 340px;
+  }
+
+  .gambiarra-carro4 {
+    display: block;
+  }
+
+  .img-box img {
+    width: 340px;
+  }
+
+}
+
+@media (min-width: 999px) and (max-width: 1124.98px) {
+
+  .conteudo-card,
+  .mais-carros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 0 0.5rem;
+  }
+
+  .gambiarra-carro4 {
+    display: inline;
+  }
 }
 
 /*  Tecnologias */
@@ -177,6 +247,32 @@
   border-radius: 0.5rem;
 }
 
+@media (max-width: 767.98px) {
+
+  .tecnologia {
+    gap: 0;
+  }
+
+  .tecnologia-imagem img {
+    display: none;
+  }
+
+  .tecnologia-vantagens {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999.98px) {
+
+  .tecnologia {
+    gap: 0;
+  }
+
+  .tecnologia-imagem img {
+    display: none;
+  }
+}
+
 /* Parceiros */
 
 .parceiros {
@@ -214,6 +310,41 @@
   border-top: 2px solid var(--cor-2);
 }
 
+@media (max-width: 767.98px) {
+
+  .parceiros {
+    padding: 0;
+  }
+
+  .parceiros ul {
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 1rem;
+  }
+
+  .parceiros ul li {
+    padding: 0.5rem;
+  }
+
+  .parceiros li:nth-child(n + 3) {
+    border-top: 2px solid var(--cor-2);
+  }
+
+  .parceiros li:nth-child(odd) {
+    border-left: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999.98px) {
+
+  .parceiros ul {
+    max-width: 1350px;
+  }
+
+  .parceiros ul li {
+    padding: 0.5rem;
+  }
+}
+
 /* Depoimentos */
 
 .feedback {
@@ -245,6 +376,12 @@
   position: relative;
 }
 
+@media (max-width: 767.98px) {
+  .feedback {
+    flex-direction: column;
+  }
+}
+
 /* Seguros */
 
 .seguros-bg {
@@ -257,6 +394,8 @@
 
 .seguros {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2.5rem;
   align-items: center;
 }
@@ -270,10 +409,17 @@
 
 .seguro-titulo {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 1rem 0;
 }
 
 .seguros-item ul li {
   margin: 0 0 0.5rem 0;
+}
+
+@media (max-width: 767.98px) {
+  .seguros {
+    flex-direction: column;
+  }
 }
