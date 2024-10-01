@@ -66,6 +66,9 @@
   justify-content: center;
   align-items: center;
 }
+.mais-carros {
+  display: none;
+}
 
 .card {
   width: 400px;

@@ -5,11 +5,15 @@
 .carros {
   display: flex;
   gap: 2.5rem;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
 }
 
 .carros-imagem {
   position: relative;
+}
+
+.carros-imagem img {
+  border-radius: 0.25rem;
 }
 
 .carros-imagem span {
@@ -62,4 +66,52 @@
 .carros-conteudo img {
   width: 24px;
   margin: 0 0.5rem 0 0;
+}
+
+@media (max-width: 999.98px) {
+
+  .carros-bg {
+    background: linear-gradient(to right, var(--cor-0) 0%, var(--cor-11) 0%);
+  }
+
+  .carros {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: auto;
+  }
+
+  .carros-imagem img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+  }
+
+  .carros-conteudo {
+    padding: 0 0.75rem;
+  }
+
+  .carros ul {
+    padding-bottom: 0.5rem;
+  }
+
+  .carros a {
+    align-self: start;
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .carros-imagem img {
+    max-width: 320px;
+    height: auto;
+  }
+
+  .carros-imagem span {
+    font-size: 12px;
+  }
+
+  .carros {
+    gap: 1rem;
+  }
 }
