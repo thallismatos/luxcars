@@ -33,6 +33,27 @@
   gap: 1rem;
 }
 
+.hover-footer li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.hover-footer li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.hover-footer li a:hover::after {
+  width: 100%;
+  background-color: var(--cor-5);
+}
+
 @media (max-width: 767.98px) {
 
   .footer {

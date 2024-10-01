@@ -404,7 +404,7 @@
 }
 
 .seguros-item {
-  background-color: var(--cor-12);
+  background-color: var(--cor-11);
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
