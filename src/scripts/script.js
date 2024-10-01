@@ -34,3 +34,16 @@ document.addEventListener('DOMContentLoaded', function() {
   loadFooter();
 });
 
+/* Carros - Ver mais */
+document.getElementById('ver-mais').addEventListener('click', function() {
+  var maisCarros = document.querySelector('.mais-carros');
+  if (maisCarros.style.display === 'none') {
+    maisCarros.style.display = 'flex'; // Altera para flex para manter a linha
+    this.textContent = 'Ver Menos'; // Altera o texto do botão
+  } else {
+    maisCarros.style.display = 'none';
+    this.textContent = 'Ver Mais'; // Restaura o texto do botão
+  }
+});
+
+
