@@ -1,0 +1,31 @@
+
+main img{
+    border-radius: 4px;
+    box-shadow: .5rem .5rem 1.5rem;
+    
+}
+
+.desenvolvedores-bg {
+    background: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 0%);
+  }
+  
+  .desenvolvedores {
+    display: flex;
+    gap: 2.5rem;
+    padding: 3rem 0;
+  }
+  .desenvolvedores-imagem {
+    position: relative;
+  }
+  
+  .desenvolvedores-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+
+    padding-left: 2rem;
+  }
+
+  .desenvolvedores-conteudo h2{
+    margin-bottom: 8px;
+  }
