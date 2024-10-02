@@ -1,7 +1,23 @@
-// Carregar o header e footer nas páginas carro, contatos, desenvolvedores, orcamentos, seguros e termos facilitando a manutenção do código
+// Carregar o header e footer nas páginas carro, contatos, desenvolvedores, orcamentos, seguros e termos facilitando a manutenção do código.
 
 function loadHeader() {
-  fetch('../pages/reutilizavel/header.html')
+  // Obtém o caminho atual da página
+  const currentPath = window.location.pathname;
+  const isIndexPage = currentPath.endsWith('index.html');
+
+  // Define o caminho do header com base na página atual
+  let headerPath;
+  let logoPath; // Variável para o caminho da logo
+
+  if (isIndexPage) {
+    headerPath = 'src/pages/reutilizavel/header.html'; // Caminho para index.html
+    logoPath = 'src/assets/geral/logo.jpg'; // Caminho para logo na página index.html
+  } else {
+    headerPath = '../pages/reutilizavel/header.html'; // Caminho para outras páginas dentro de src/pages
+    logoPath = '../assets/geral/logo.jpg'; // Caminho para logo em outras páginas
+  }
+
+  fetch(headerPath)
     .then(response => {
       if (!response.ok) {
         throw new Error('Erro ao carregar o header: ' + response.statusText);
@@ -10,8 +26,62 @@ function loadHeader() {
     })
     .then(data => {
       document.getElementById('reutilizar-cabecalho').innerHTML = data;
+
+      // Define o caminho da logo no cabeçalho carregado
+      document.getElementById('logo').src = logoPath;
+
+      initMenu(); // Chama a função para inicializar o menu após o cabeçalho ser carregado
     })
-    .catch(error => console.error(error));
+    .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
+}
+
+function initMenu() {
+  const menuList = document.getElementById('menu-list');
+
+  // Define os itens do menu padrão
+  const menuItems = [
+    { name: 'Carros', href: 'src/pages/carros.html' },
+    { name: 'Seguros', href: 'src/pages/seguros.html' },
+    { name: 'Contatos', href: 'src/pages/contatos.html' },
+    { name: 'Orçamentos', href: 'src/pages/orcamentos.html' },
+  ];
+
+  const isIndexPage = window.location.pathname.endsWith('index.html');
+  const isInsideSrcPages = window.location.pathname.includes('/src/pages/');
+
+  // Adiciona os itens do menu
+  if (isIndexPage) {
+    menuItems.forEach(item => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.setAttribute('href', item.href);
+      a.textContent = item.name;
+      li.appendChild(a);
+      menuList.appendChild(li);
+    });
+  } else if (isInsideSrcPages) {
+    const homeItem = document.createElement('li');
+    const homeLink = document.createElement('a');
+    homeLink.setAttribute('href', '../../../index.html');
+    homeLink.textContent = 'Home';
+    homeItem.appendChild(homeLink);
+    menuList.appendChild(homeItem);
+
+    menuItems.forEach(item => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.setAttribute('href', item.href.replace('src/pages/', ''));
+      a.textContent = item.name;
+      li.appendChild(a);
+      menuList.appendChild(li);
+    });
+  }
+
+  // Adiciona o evento de clique ao ícone do hamburger após o menu ter sido carregado
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  hamburgerIcon.addEventListener('click', () => {
+    menuList.classList.toggle('open');
+  });
 }
 
 function loadFooter() {
@@ -34,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
   loadFooter();
 });
 
+
 /* Carros - Ver mais */
 document.getElementById('ver-mais').addEventListener('click', function () {
   var maisCarros = document.querySelector('.mais-carros');
@@ -55,5 +126,3 @@ document.getElementById('ver-mais').addEventListener('click', function () {
     this.textContent = 'Ver Mais';
   }
 });
-
-

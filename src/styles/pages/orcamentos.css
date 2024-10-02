@@ -4,26 +4,9 @@
   justify-content: center;
 }
 
-.orcamento h2 {
-  text-transform: uppercase;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.orcamento h2::before {
-  content: "";
-  display: inline-block;
-  width: 0.25rem;
-  height: 0.5rem;
-  background-color: var(--cor-p1);
-  position: absolute;
-  left: -0.75rem;
-}
-
 .orcamento-produto {
   background-color: var(--cor-11);
-  width: 500px;
+  max-width: 500px;
   border-radius: 0.5rem;
 }
 
@@ -49,9 +32,21 @@
 }
 
 .orcamento-produto h2 {
-  font-size: 2rem; 
+  font-size: 2rem;
   text-transform: uppercase;
   position: relative;
-  display: flex;
-  align-items: center;
+  text-align: center;
+
+}
+
+@media (max-width: 767.98px) {
+
+  .orcamento {
+    flex-direction: column;
+  }
+
+  .orcamento-produto h2 {
+    font-size: 1.5rem;
+    width: auto;
+  }
 }
