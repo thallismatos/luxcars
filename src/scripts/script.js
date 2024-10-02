@@ -3,7 +3,7 @@
 function loadHeader() {
   // Obtém o caminho atual da página
   const currentPath = window.location.pathname;
-  const isIndexPage = currentPath.endsWith('index.html');
+  currentPath === '/' || currentPath.endsWith('index.html');
 
   // Define o caminho do header com base na página atual
   let headerPath;
