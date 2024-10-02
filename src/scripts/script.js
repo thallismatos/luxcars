@@ -49,7 +49,11 @@ function initMenu() {
     { name: 'Orçamentos', href: 'src/pages/orcamentos.html' },
   ];
 
-  const isIndexPage = window.location.pathname.endsWith('index.html');
+  const currentPath = window.location.pathname;
+  const fullURL = window.location.href;
+
+  // Verifica se estamos na página raiz ou na "index.html"
+  const isIndexPage = fullURL === window.location.origin + '/' || currentPath.endsWith('index.html');
   const isInsideSrcPages = window.location.pathname.includes('/src/pages/');
 
   // Adiciona os itens do menu
