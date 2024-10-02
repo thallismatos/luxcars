@@ -1,9 +1,12 @@
 // Carregar o header e footer nas páginas carro, contatos, desenvolvedores, orcamentos, seguros e termos facilitando a manutenção do código.
 
 function loadHeader() {
-  // Obtém o caminho atual da página
+  // Obtém o caminho completo da página atual
   const currentPath = window.location.pathname;
-  currentPath === '/' || currentPath.endsWith('index.html');
+  const fullURL = window.location.href;
+
+  // Verifica se estamos na página raiz ou na "index.html"
+  const isIndexPage = fullURL === window.location.origin + '/' || currentPath.endsWith('index.html');
 
   // Define o caminho do header com base na página atual
   let headerPath;
