@@ -6,7 +6,7 @@
 
 .orcamento-produto {
   background-color: var(--cor-11);
-  max-width: 500px;
+  width: auto;
   border-radius: 0.5rem;
 }
 
@@ -48,5 +48,10 @@
   .orcamento-produto h2 {
     font-size: 1.5rem;
     width: auto;
+  }
+
+  .orcamento-dados {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }

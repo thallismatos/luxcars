@@ -16,3 +16,7 @@
 @import url("./global/componentes.css");
 @import url("./global/header.css");
 @import url("global/footer.css");
+
+html {
+  scroll-behavior: smooth;
+}

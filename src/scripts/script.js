@@ -89,6 +89,13 @@ function initMenu() {
   hamburgerIcon.addEventListener('click', () => {
     menuList.classList.toggle('open');
   });
+
+  // Seleciona todos os links dentro do menu e adiciona o evento de click
+  menuList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuList.classList.remove('open'); // Fecha o menu ao clicar em um link
+    });
+  });
 }
 
 function loadFooter() {
@@ -111,6 +118,60 @@ document.addEventListener('DOMContentLoaded', function () {
   loadFooter();
 });
 
+/* Preenchar dados atraves do cep */
+async function buscarCEP() {
+  const cep = document.getElementById("cep").value.replace(/\D/g, ''); // Remover caracteres não numéricos
+  const mensagemErro = document.getElementById("mensagem-erro"); // Selecionar o elemento de mensagem de erro
+  mensagemErro.style.display = 'none'; // Ocultar a mensagem de erro inicialmente
+
+  if (isValidCEP(cep)) { // Checar se o CEP é válido
+    const url = `https://viacep.com.br/ws/${cep}/json/`;
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      if (!data.erro) {
+        // Preencher os campos apenas se o CEP for válido
+        preencherCampos(data);
+      } else {
+        mostrarErro("CEP não encontrado!");
+      }
+    } catch (error) {
+      mostrarErro("Erro ao buscar o CEP. Tente novamente.");
+      console.error("Erro:", error);
+    }
+  } else {
+    mostrarErro("Digite um CEP válido com 8 dígitos.");
+  }
+}
+
+// Função para validar o CEP
+function isValidCEP(cep) {
+  return cep.length === 8 && /^\d+$/.test(cep);
+}
+
+// Função para preencher os campos de endereço
+function preencherCampos(data) {
+  document.getElementById("logradouro").value = data.logradouro;
+  document.getElementById("bairro").value = data.bairro;
+  document.getElementById("cidade").value = data.localidade;
+  document.getElementById("uf").value = data.uf;
+}
+
+// Função para mostrar mensagem de erro
+function mostrarErro(mensagem) {
+  limparCampos();
+  const mensagemErro = document.getElementById("mensagem-erro");
+  mensagemErro.innerText = mensagem;
+  mensagemErro.style.display = 'block'; // Mostrar a mensagem de erro
+}
+
+// Função para limpar os campos de endereço
+function limparCampos() {
+  document.getElementById("logradouro").value = '';
+  document.getElementById("bairro").value = '';
+  document.getElementById("cidade").value = '';
+  document.getElementById("uf").value = '';
+}
 
 /* Carros - Ver mais */
 document.getElementById('ver-mais').addEventListener('click', function () {

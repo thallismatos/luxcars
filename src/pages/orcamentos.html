@@ -26,18 +26,17 @@
 
     <form class="orcamento container" action="orcamentos.html">
       <div class="orcamento-produto">
-      <h2 class="font-1-m cor-0"> Os melhores preços </h2>
-      
+        <h2 class="font-1-m cor-0"> Os melhores preços</h2>
       </div>
 
       <div class="orcamento-dados form">
         <h2 class="font-1-xs cor-9 col-2">Dados pessoais</h2>
         <div>
           <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome"">
+          <input type="text" id="nome" name="nome">
         </div>
         <div>
-          <label for=" sobrenome">Sobrenome</label>
+          <label for="sobrenome">Sobrenome</label>
           <input type="text" id="sobrenome" name="sobrenome">
         </div>
         <div class="col-2">
@@ -51,7 +50,8 @@
         <h2 class="font-1-xs cor-9 col-2">Entrega</h2>
         <div>
           <label for="cep">CEP</label>
-          <input type="text" id="cep" name="cep">
+          <input type="text" id="cep" name="cep" onblur="buscarCEP()">
+          <div id="mensagem-erro" style="color: red; display: none;"></div>
         </div>
         <div>
           <label for="numero">Número</label>
@@ -59,21 +59,21 @@
         </div>
         <div>
           <label for="logradouro">Logradouro</label>
-          <input type="text" id="logradouro" name="logradouro">
+          <input type="text" id="logradouro" name="logradouro" required readonly>
         </div>
         <div>
           <label for="bairro">Bairro</label>
-          <input type="text" id="bairro" name="bairro">
+          <input type="text" id="bairro" name="bairro" required readonly>
         </div>
         <div>
           <label for="cidade">Cidade</label>
-          <input type="text" id="cidade" name="cidade">
+          <input type="text" id="cidade" name="cidade" required readonly>
         </div>
         <div>
-          <label for="estado">Estado</label>
-          <input type="text" id="estado" name="estado">
+          <label for="uf">UF</label>
+          <input type="text" id="uf" name="uf" maxlength="2" required readonly>
         </div>
-        <button class="botao col-2">Solicitar Orçamento</button>
+        <button type="submit" class="botao col-2">Solicitar Orçamento</button>
       </div>
     </form>
   </main>
