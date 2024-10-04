@@ -1,6 +1,5 @@
 <div align="center">
   <img alt="LuxCars" src="src/assets/geral/logo.jpg" width="20%">
-  <h1>LuxCars</h1>
   <h3>Site de Venda e Seguro de Carros de Luxo</h3>
 </div>
 
@@ -30,7 +29,7 @@ Este projeto foi desenvolvido ao longo de 5 dias na **Residência SerraTec - Sof
 O site é composto por 7 páginas principais, cada uma com um propósito específico:
 
 - **Index.html**: Apresenta a empresa e seus principais serviços.
-- **Orçamento.html**: Dedicada à solicitação de orçamento, integra a API ViaCep para o preenchimento automático dos campos de endereço ao inserir o CEP.
+- **Orçamentos.html**: Dedicada à solicitação de orçamento, integra a API ViaCep para o preenchimento automático dos campos de endereço ao inserir o CEP.
 - **Desenvolvedores.html**: Apresenta os desenvolvedores responsáveis pelo site e suas contribuições.
 - **Seguros.html**: Detalha as opções de seguros oferecidos para os carros de luxo.
 - **Carros.html**: Exibe a lista de carros de luxo personalizados à venda, com detalhes sobre cada modelo.
