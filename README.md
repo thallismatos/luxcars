@@ -9,12 +9,12 @@
 
 1. [Acesso](#-acesso)
 2. [Resumo do Projeto](#-resumo-do-projeto)
-3. [Estrutura do Site](#estrutura-do-site)
-4. [Organização da Estrutura de Pastas](#organização-da-estrutura-de-pastas)
-5. [Responsividade e Boas Práticas](#responsividade-e-boas-práticas)
+3. [Estrutura do Site](#-estrutura-do-site)
+4. [Organização da Estrutura de Pastas](#-organização-da-estrutura-de-pastas)
+5. [Responsividade e Boas Práticas](#-responsividade-e-boas-práticas)
 6. [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 7. [Layouts](#-layouts)
-8. [Colaboradores](#colaboradores)
+8. [Colaboradores](#-colaboradores)
 
 ## 🖱 Acesso
 
