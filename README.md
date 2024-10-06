@@ -11,10 +11,9 @@
 2. [Resumo do Projeto](#-resumo-do-projeto)
 3. [Estrutura do Site](#-estrutura-do-site)
 4. [Organização da Estrutura de Pastas](#-organização-da-estrutura-de-pastas)
-5. [Responsividade e Boas Práticas](#-responsividade-e-boas-práticas)
-6. [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-7. [Layouts](#-layouts)
-8. [Colaboradores](#-colaboradores)
+5. [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+6. [Layouts](#-layouts)
+7. [Colaboradores](#-colaboradores)
 
 ## 🖱 Acesso
 
@@ -24,7 +23,7 @@ Para acessar o site, clique [aqui](https://luxcars.vercel.app/).
 
 Este projeto foi desenvolvido ao longo de 5 dias na **Residência SerraTec - Software**, com o objetivo de aplicar conceitos essenciais e fundamentais de desenvolvimento front-end. O site, voltado para a venda de carros de luxo personalizados e seguros, foi projetado para proporcionar uma experiência visualmente agradável e funcional. Para garantir que a interface atendesse a essas expectativas, buscamos referências de design modernos e atraentes.
 
-- Os principais focos do projeto incluíram:
+Os principais focos do projeto incluíram:
 
 1. **Boas Práticas de Versionamento com Git:** Assegurar que todas as alterações sejam documentadas de maneira clara, facilitando o rastreamento do desenvolvimento.
 
@@ -75,10 +74,6 @@ A estrutura do projeto foi organizada de maneira clara e eficiente, separando os
 3. utilidades/: Configurações de cores e tipografias.
 
 4. style.css: Arquivo responsável por importar o reset, o bootstrap, as fontes e os estilos globais.
- 
-## 📱 Responsividade e Boas Práticas
-
-A responsividade foi um aspecto central no desenvolvimento do site, garantindo que ele se adapte perfeitamente a diferentes dispositivos e tamanhos de tela. O projeto foi versionado utilizando Git, buscando colocar commits claros e descritivos, facilitando o rastreamento de alterações e contribuindo para o trabalho em equipe.
 
 ## 🎯 Tecnologias Utilizadas
 
