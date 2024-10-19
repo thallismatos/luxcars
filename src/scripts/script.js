@@ -99,7 +99,7 @@ function initMenu() {
 }
 
 function loadFooter() {
-  fetch('../pages/reutilizavel/footer.html')
+  fetch('src/pages/reutilizavel/footer.html')
     .then(response => {
       if (!response.ok) {
         throw new Error('Erro ao carregar o footer: ' + response.statusText);
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
   loadFooter();
 });
 
-/* Preenchar dados atraves do cep */
+// Preenchar dados atraves do cep
 async function buscarCEP() {
   const cep = document.getElementById("cep").value.replace(/\D/g, ''); // Remover caracteres não numéricos
   const mensagemErro = document.getElementById("mensagem-erro"); // Selecionar o elemento de mensagem de erro
